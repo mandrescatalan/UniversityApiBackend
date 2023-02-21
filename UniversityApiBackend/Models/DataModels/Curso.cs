@@ -13,5 +13,15 @@ namespace UniversityApiBackend.Models.DataModels
         public string Objetivos { get; set; } = string.Empty;
         public string Requisitos { get; set; } = string.Empty;
         public Nivel Nivel { get; set; } = Nivel.Basico;
+
+        [Required]
+        public ICollection<Categoria> categorias { get; set; } = new List<Categoria>();
+
+        [Required]
+        public Tema Tema { get; set; } = new Tema();
+
+        [Required]
+        public ICollection<Estudiante> estudiantes { get; set; } = new List<Estudiante>();
+
     }
 }
